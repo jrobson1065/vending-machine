@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/vending-machine.css" />
+    <title>Vending Machine</title>
+  </head>
+  <body>
+    <h1>Vending Machine</h1>
+    <div class="vending-machine">
+      <div class="row row-a">
+        <span class="item a1">A1</span>
+        <span class="item a2">A2</span>
+        <span class="item a3">A3</span>
+        <span class="item a4">A4</span>
+      </div>
+      <div class="row row-b">
+        <span class="item b1">B1</span>
+        <span class="item b2">B2</span>
+        <span class="item b3">B3</span>
+        <span class="item b4">B4</span>
+      </div>
+      <div class="row row-c">
+        <span class="item c1">C1</span>
+        <span class="item c2">C2</span>
+        <span class="item c3">C3</span>
+        <span class="item c4">C4</span>
+        <span class="item c5">C5</span>
+        <span class="item c6">C6</span>
+        <span class="item c7">C7</span>
+      </div>
+    </div>
+
+    <div class="screen">
+      <span class="text">Please insert coins: $<span>0.00</span></span>
+      <span class="subtext"
+        >Row A: $1.50 --- Row B: $1.25 --- Row C: $1.00</span
+      >
+    </div>
+
+    <div class="keypad">
+      <div class="keypad-screen"></div>
+      <div class="letters">
+        <span class="key key-a on">A</span>
+        <span class="key key-b on">B</span>
+        <span class="key key-b on">C</span>
+      </div>
+      <div class="numbers">
+        <span class="key key-1 on">1</span>
+        <span class="key key-2 on">2</span>
+        <span class="key key-3 on">3</span>
+        <span class="key key-4 on">4</span>
+        <span class="key key-5 on">5</span>
+        <span class="key key-6 on">6</span>
+        <span class="key key-7 on">7</span>
+        <span class="key key-enter off">Enter</span>
+      </div>
+    </div>
+
+    <div class="coins">
+      <img class="quarter" src="/images/quarter.png" alt="" />
+      <img class="dime" src="/images/dime.png" alt="" />
+      <img class="nickel" src="/images/nickel.png" alt="" />
+      <img class="penny" src="/images/penny.png" alt="" />
+    </div>
+    <script src="JS/vending-machine-app.js" type="module"></script>
+  </body>
+</html>
