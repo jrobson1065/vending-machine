@@ -20,3 +20,9 @@ export function insertPenny() {
     return formatter.format(Math.round(100*coinReturn)/100);
 }
 
+export function updateDisplay(price) {
+    tenderAmount -= price;
+
+    return tenderAmount;
+}
+
