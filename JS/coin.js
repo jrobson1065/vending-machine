@@ -15,7 +15,7 @@ export function insertCoin(coin) {
 }
 
 export function insertPenny() {
-    if (coin === "penny") coinReturn += 0.01;
+    coinReturn += 0.01;
 
     return formatter.format(Math.round(100*coinReturn)/100);
 }
