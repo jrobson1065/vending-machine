@@ -1,5 +1,5 @@
 import { resetKeypad, letterKeyPress, numberKeyPress } from "./keypad.js";
-import { insertCoin, insertPenny, updateDisplay, getTenderAmount } from "./coin.js";
+import { insertCoin, insertPenny, updateDisplay, getTenderAmount, flashingWarning } from "./coin.js";
 
 const letterKeys = document.querySelectorAll(".letters .key");
 const numberKeys = document.querySelectorAll(".numbers .key");
@@ -85,3 +85,5 @@ function changeDisplayText() {
 function changeDisplayTextToDefault() {
   displayTextSpan.innerText = "Please Insert Coins";
 }
+
+flashingWarning();
