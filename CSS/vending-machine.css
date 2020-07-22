@@ -1,0 +1,241 @@
+:root {
+    --color1: rgb(125, 186, 252);
+    --color2: rgb(55, 144, 238);
+    --color2a: rgba(55, 143, 238, 0.1);
+    --color2aa: rgba(55, 143, 238, 0.5);
+    --color3: rgb(117, 255, 213);
+    --color3a: rgba(117, 255, 214, 0.4);
+  }
+  
+  @font-face {
+    font-family: "Digital 7";
+    src: url("/font/digital-7\ \(mono\).ttf") format("truetype");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: black;
+  }
+  
+  h1 {
+    font-size: 50pt;
+    color: var(--color3);
+    text-shadow: 0 0 2px var(--color2), 0 0 4px var(--color2);
+    text-align: center;
+    margin: 50px 0;
+    font-family: "Digital 7";
+  }
+  
+  .vending-machine {
+    position: fixed;
+    left: 100px;
+    top: 150px;
+    height: 500px;
+    width: 500px;
+    background-image: url(/images/vending-machine.png);
+    background-position: center;
+    background-size: 580px 580px;
+  }
+  
+  .row {
+    background-color: black;
+    width: 330px;
+    height: 16px;
+    position: absolute;
+    left: 57px;
+  }
+  
+  .row-a {
+    top: 145px;
+  }
+  
+  .row-b {
+    top: 274px;
+  }
+  
+  .row-c {
+    top: 362px;
+  }
+  
+  .item {
+    font-family: "Digital 7";
+    font-size: 15pt;
+    position: relative;
+    color: var(--color1);
+    cursor: default;
+  }
+  
+  .a1,
+  .b1 {
+    left: 15px;
+  }
+  
+  .a2,
+  .b2 {
+    left: 75px;
+  }
+  
+  .a3,
+  .b3 {
+    left: 140px;
+  }
+  
+  .a4,
+  .b4 {
+    left: 220px;
+  }
+  
+  .c1 {
+    left: 15px;
+  }
+  
+  .c2 {
+    left: 40px;
+  }
+  
+  .c3 {
+    left: 70px;
+  }
+  
+  .c4 {
+    left: 95px;
+  }
+  
+  .c5 {
+    left: 120px;
+  }
+  
+  .c6 {
+    left: 145px;
+  }
+  
+  .c7 {
+    left: 165px;
+  }
+  
+  .screen {
+    background-color: var(--color3);
+    height: auto;
+    width: 500px;
+    position: fixed;
+    left: 530px;
+    top: 220px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .screen .text {
+    font-family: "Digital 7";
+    font-size: 30pt;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .screen .subtext {
+    font-family: "Digital 7";
+    font-size: 15pt;
+  }
+  
+  .keypad {
+    position: absolute;
+    background-color: black;
+    width: 170px;
+    top: 330px;
+    left: 530px;
+    padding: 5px;
+  }
+  
+  .keypad-screen {
+    background-color: var(--color3);
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Digital 7";
+    font-size: 20pt;
+    border-radius: 5px;
+    height: 40px;
+  }
+  
+  .keypad .key {
+    position: relative;
+    font-family: "Digital 7";
+    font-size: 30pt;
+    padding: 5px 0;
+    border-radius: 5px;
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .keypad .key-enter {
+      width: 105px;
+  }
+  
+  .numbers .key:nth-child(7),
+  .numbers .key:nth-child(8),
+  .numbers .key:nth-child(9) {
+    margin-bottom: 0;
+  }
+  
+  .on {
+    border: 2px solid var(--color2);
+    color: var(--color1);
+    cursor: pointer;
+  }
+  
+  .selected {
+    background-color: var(--color3a);
+  }
+  
+  .on:hover {
+    background-color: var(--color3a);
+  }
+  
+  .off {
+    color: var(--color2aa);
+    border: 2px solid var(--color2aa);
+    cursor: pointer;
+  }
+  
+  .disabled {
+    color: var(--color2a);
+    border: 2px solid var(--color2a);
+    cursor: default;
+  }
+  
+  .coins {
+    position: absolute;
+    top: 330px;
+    left: 700px;
+  }
+  
+  .coins img {
+    position: absolute;
+    width: 100px;
+    height: auto;
+  }
+  
+  .quarter {
+    left: 20px;
+  }
+  
+  .dime {
+    left: 150px;
+  }
+  
+  .nickel {
+    top: 150px;
+    left: 20px;
+  }
+  
+  .penny {
+    top: 150px;
+    left: 150px;
+  }
+  
