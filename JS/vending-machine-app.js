@@ -58,6 +58,7 @@ pennyPic.addEventListener("click", () => {
 
 enterKey.addEventListener("click", () => {
   let choice = keypadScreen.textContent.charAt(0);
+  
   if (!enterKey.classList.contains("disabled")) {
     if (choice === "A") {
       tenderAmountSpan.innerText = updateDisplay(1.50);
