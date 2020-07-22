@@ -40,3 +40,11 @@ quarterPic.addEventListener("click", () => {
 dimePic.addEventListener("click", () => {
   tenderAmountSpan.innerText = insertCoin("dime");
 })
+
+nickelPic.addEventListener("click", () => {
+  tenderAmountSpan.innerText = insertCoin("nickel");
+})
+
+pennyPic.addEventListener("click", () => {
+  tenderAmountSpan.innerText = insertCoin("penny");
+})

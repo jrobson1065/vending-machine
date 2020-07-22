@@ -238,4 +238,17 @@
     top: 150px;
     left: 150px;
   }
-  
+
+  .coin-return{
+    background-color: var(--color3);
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    position: fixed;
+    top: 615px;
+    left: 530px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Digital 7";
+    font-size: 20pt;
+  }
