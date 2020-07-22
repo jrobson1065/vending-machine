@@ -26,9 +26,10 @@
     font-size: 50pt;
     color: var(--color3);
     text-shadow: 0 0 2px var(--color2), 0 0 4px var(--color2);
-    text-align: center;
     margin: 50px 0;
     font-family: "Digital 7";
+    position: fixed;
+    left: 250px;
   }
   
   .vending-machine {
