@@ -1,5 +1,5 @@
 import { resetKeypad, letterKeyPress, numberKeyPress } from "./keypad.js";
-import { insertCoin } from "./coin.js";
+import { insertCoin, insertPenny } from "./coin.js";
 
 const letterKeys = document.querySelectorAll(".letters .key");
 const numberKeys = document.querySelectorAll(".numbers .key");
@@ -9,6 +9,7 @@ const dimePic = document.querySelector(".dime");
 const nickelPic = document.querySelector(".nickel");
 const pennyPic = document.querySelector(".penny");
 const tenderAmountSpan = document.querySelector(".tender-amount");
+const coinReturnSpan = document.querySelector(".return-amount");
 
 window.addEventListener("load", resetKeypad);
 
@@ -46,5 +47,5 @@ nickelPic.addEventListener("click", () => {
 })
 
 pennyPic.addEventListener("click", () => {
-  tenderAmountSpan.innerText = insertCoin("penny");
+  coinReturnSpan.innerText = insertPenny();
 })
