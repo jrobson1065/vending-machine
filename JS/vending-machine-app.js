@@ -1,5 +1,5 @@
 import { resetKeypad, letterKeyPress, numberKeyPress } from "./keypad.js";
-import { insertCoin, insertPenny, updateDisplay } from "./coin.js";
+import { insertCoin, insertPenny, updateDisplay, getTenderAmount } from "./coin.js";
 
 const letterKeys = document.querySelectorAll(".letters .key");
 const numberKeys = document.querySelectorAll(".numbers .key");
@@ -37,18 +37,22 @@ for (let i = 0; i < numberKeys.length - 1; i++) {
 }
 
 quarterPic.addEventListener("click", () => {
+  changeDisplayText();
   tenderAmountSpan.innerText = insertCoin("quarter");
 });
 
 dimePic.addEventListener("click", () => {
+  changeDisplayText();
   tenderAmountSpan.innerText = insertCoin("dime");
 });
 
 nickelPic.addEventListener("click", () => {
+  changeDisplayText();
   tenderAmountSpan.innerText = insertCoin("nickel");
 });
 
 pennyPic.addEventListener("click", () => {
+  changeDisplayText();
   coinReturnSpan.innerText = insertPenny();
 });
 
@@ -63,4 +67,20 @@ enterKey.addEventListener("click", () => {
       tenderAmountSpan.innerText = updateDisplay(1.00);
     }
   }
+
+  if (getTenderAmount() === 0) {
+    tenderAmountSpan.innerText = "";
+    changeDisplayTextToDefault();
+  }
+
+  resetKeypad();
+  keypadScreen.innerText = "";
 });
+
+function changeDisplayText() {
+  displayTextSpan.innerText = "Amount Entered: ";
+}
+
+function changeDisplayTextToDefault() {
+  displayTextSpan.innerText = "Please Insert Coins";
+}

@@ -121,7 +121,7 @@
   .screen {
     background-color: var(--color3);
     height: auto;
-    width: 500px;
+    width: auto;
     position: fixed;
     left: 530px;
     top: 220px;

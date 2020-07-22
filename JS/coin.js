@@ -14,6 +14,10 @@ export function insertCoin(coin) {
     return formatter.format(Math.round(100*tenderAmount)/100);
 }
 
+export function getTenderAmount() {
+    return tenderAmount;
+}
+
 export function insertPenny() {
     coinReturn += 0.01;
 
