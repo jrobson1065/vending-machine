@@ -4,6 +4,7 @@ let notEnoughMoneySpan = document.querySelector(".not-enough-funds");
 let priceOfDesiredSelection = 0;
 const snack = document.querySelector(".snack");
 const keypadScreen = document.querySelector(".keypad-screen");
+const coinReturnSpan = document.querySelector(".return-amount");
 
 const formatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -36,13 +37,21 @@ export function updateDisplay(price) {
   priceOfDesiredSelection = price;
   if (tenderAmount >= price) {
     tenderAmount -= price;
+    returnCoins(tenderAmount);
     priceOfDesiredSelection = 0;
     renderSnack();
+    tenderAmount = 0;
   } else {
     notEnoughMoneySpan.innerText = "NOT ENOUGH MONEY";
   }
 
   return formatter.format(Math.round(100 * tenderAmount) / 100);
+}
+
+function returnCoins(tenderAmount) {
+  coinReturn += tenderAmount;
+
+  coinReturnSpan.innerText = formatter.format(Math.round(100 * coinReturn) / 100);
 }
 
 export function flashingWarning() {
