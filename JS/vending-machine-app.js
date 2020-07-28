@@ -1,5 +1,12 @@
 import { resetKeypad, letterKeyPress, numberKeyPress } from "./keypad.js";
-import { insertCoin, insertPenny, updateDisplay, getTenderAmount, flashingWarning } from "./coin.js";
+import {
+  insertCoin,
+  insertPenny,
+  updateDisplay,
+  getTenderAmount,
+  flashingWarning,
+  resetCoinReturn,
+} from "./coin.js";
 
 const letterKeys = document.querySelectorAll(".letters .key");
 const numberKeys = document.querySelectorAll(".numbers .key");
@@ -12,6 +19,7 @@ const pennyPic = document.querySelector(".penny");
 const tenderAmountSpan = document.querySelector(".tender-amount");
 const coinReturnSpan = document.querySelector(".return-amount");
 const displayTextSpan = document.querySelector(".display-text");
+const takeCoinsButton = document.querySelector(".take-coins");
 
 window.addEventListener("load", resetKeypad);
 
@@ -58,14 +66,14 @@ pennyPic.addEventListener("click", () => {
 
 enterKey.addEventListener("click", () => {
   let choice = keypadScreen.textContent.charAt(0);
-  
+
   if (!enterKey.classList.contains("disabled")) {
     if (choice === "A") {
-      tenderAmountSpan.innerText = updateDisplay(1.50);
+      tenderAmountSpan.innerText = updateDisplay(1.5);
     } else if (keypadScreen.innerText.charAt(0) === "B") {
       tenderAmountSpan.innerText = updateDisplay(1.25);
     } else if (keypadScreen.innerText.charAt(0) === "C") {
-      tenderAmountSpan.innerText = updateDisplay(1.00);
+      tenderAmountSpan.innerText = updateDisplay(1.0);
     }
   }
 
@@ -76,6 +84,11 @@ enterKey.addEventListener("click", () => {
 
   resetKeypad();
   keypadScreen.innerText = "";
+});
+
+takeCoinsButton.addEventListener("click", () => {
+  coinReturnSpan.innerText = "$0.00";
+  resetCoinReturn();
 });
 
 function changeDisplayText() {

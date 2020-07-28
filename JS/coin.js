@@ -63,6 +63,10 @@ export function flashingWarning() {
   }, 1200);
 }
 
+export function resetCoinReturn() {
+  coinReturn = 0;
+}
+
 function renderSnack() {
     let selection = keypadScreen.textContent;
     if (selection === "A1") snack.innerText = "Doritos";
